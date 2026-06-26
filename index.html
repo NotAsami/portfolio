@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sam — Portfolio</title>
+<meta name="description" content="Computer-science student & automation developer in Bratislava. I deploy what I build, debug it at the protocol level, and care about the details most people skip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#14111e;}
+  *{box-sizing:border-box;}
+  @keyframes wobble{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(-3deg)}}
+  @keyframes popdot{0%{transform:scale(1)}50%{transform:scale(1.35)}100%{transform:scale(1)}}
+  @keyframes bobA{0%,100%{transform:rotate(6deg) translateY(0)}50%{transform:rotate(6deg) translateY(-9px)}}
+  @keyframes bobB{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-7px)}}
+  @keyframes bobC{0%,100%{transform:rotate(4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-8px)}}
+  @keyframes starBob{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-9deg) translateY(-3px)}}
+  @keyframes popIn{0%{opacity:0;transform:translateY(20px) scale(.96)}62%{opacity:1;transform:translateY(-5px) scale(1.012)}100%{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes popChip{0%{opacity:0;transform:translateY(9px) scale(.82)}70%{opacity:1;transform:translateY(-2px) scale(1.05)}100%{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes gradPan{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+  @keyframes hwiggle{0%,100%{transform:rotate(-6deg)}30%{transform:rotate(-15deg)}65%{transform:rotate(2deg)}}
+  @keyframes floatDot{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-16px) scale(1.08)}}
+  ::selection{background:#b8f24a;color:#14111e;}
+  a{text-decoration:none;}
+</style>
+<noscript><style>[data-reveal]{opacity:1 !important;transform:none !important;}</style></noscript>
+<script src="./image-slot.js"></script>
+<script defer src="./app.js"></script>
+</head>
+<body>
+<div id="top" style="--c1:#ff6f61;--c2:#b8f24a;--c3:#46d3ff;--c4:#b98bff;--c5:#ffd23f;--p:#ff6f61;position:relative;min-height:100%;background:#14111e;color:#f5f0ff;font-family:'Nunito',system-ui,sans-serif;overflow:hidden;">
+
+  <div data-bg-pattern="" style="position:absolute;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.04) 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div data-ambient="" style="position:absolute;top:-120px;right:-100px;width:420px;height:420px;border-radius:50%;background:var(--c4,#b98bff);opacity:.14;filter:blur(20px);z-index:0;pointer-events:none;"></div>
+  <div data-ambient="" style="position:absolute;top:1100px;left:-140px;width:460px;height:460px;border-radius:50%;background:var(--c3,#46d3ff);opacity:.10;filter:blur(20px);z-index:0;pointer-events:none;"></div>
+  <div data-ambient="" style="position:absolute;top:200px;left:40px;width:16px;height:16px;border-radius:50%;background:var(--c2,#b8f24a);opacity:.5;z-index:0;pointer-events:none;animation:floatDot 5s ease-in-out infinite;"></div>
+  <div data-ambient="" style="position:absolute;top:340px;right:60px;width:11px;height:11px;border-radius:50%;background:var(--c5,#ffd23f);opacity:.55;z-index:0;pointer-events:none;animation:floatDot 6.5s ease-in-out infinite .8s;"></div>
+  <div data-ambient="" style="position:absolute;top:140px;right:280px;width:9px;height:9px;border-radius:3px;background:var(--c4,#b98bff);opacity:.5;z-index:0;pointer-events:none;animation:floatDot 4.4s ease-in-out infinite .3s;transform:rotate(20deg);"></div>
+
+  <nav style="position:sticky;top:0;z-index:60;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(20,17,30,.72);">
+    <div style="max-width:1160px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;">
+      <a href="#top" style="display:flex;align-items:center;gap:10px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:20px;color:#f5f0ff;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:11px;background:var(--p,#ff6f61);color:#14111e;font-weight:700;transform:rotate(-6deg);box-shadow:3px 3px 0 rgba(0,0,0,.35);" style-hover="animation:hwiggle .55s ease;">S</span>
+        sam
+      </a>
+      <div style="display:flex;align-items:center;gap:6px;font-family:'Fredoka',sans-serif;font-weight:500;font-size:15px;">
+        <a href="#projects" style="color:#cfc6e6;padding:8px 13px;border-radius:11px;transition:color .15s,background .15s;" style-hover="color:#14111e;background:var(--c2,#b8f24a);">projects</a>
+        <a href="#skills" style="color:#cfc6e6;padding:8px 13px;border-radius:11px;transition:color .15s,background .15s;" style-hover="color:#14111e;background:var(--c3,#46d3ff);">skills</a>
+        <a href="#about" style="color:#cfc6e6;padding:8px 13px;border-radius:11px;transition:color .15s,background .15s;" style-hover="color:#14111e;background:var(--c4,#b98bff);">about</a>
+        <a href="https://github.com/NotAsami" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;margin-left:6px;color:#14111e;background:#f5f0ff;font-weight:600;padding:9px 15px;border-radius:12px;box-shadow:3px 3px 0 var(--p,#ff6f61);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--p,#ff6f61);">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <header style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:54px 26px 60px;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;">
+    <div style="animation:popIn .8s cubic-bezier(.2,.8,.3,1) both;">
+      <div data-tilt="" data-rot="-2.5" style="--rot:-2.5deg;display:inline-flex;align-items:center;gap:9px;transform:rotate(var(--rot));font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:.5px;color:#14111e;background:var(--c2,#b8f24a);padding:8px 14px;border-radius:999px;box-shadow:4px 4px 0 rgba(0,0,0,.3);margin-bottom:26px;">
+        <span style="width:9px;height:9px;border-radius:50%;background:#14111e;animation:popdot 1.4s ease-in-out infinite;"></span> OPEN TO WORK
+      </div>
+      <h1 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-1px;margin:0 0 22px;">I build stuff that<br><span style="position:relative;display:inline-block;color:#14111e;background:var(--p,#ff6f61);padding:0 14px;border-radius:14px;transform:rotate(-1.5deg);box-shadow:5px 5px 0 rgba(0,0,0,.3);">actually runs.</span></h1>
+      <p style="font-size:18px;line-height:1.6;color:#c6bdda;max-width:520px;margin:0 0 28px;font-weight:600;">Computer-science student &amp; automation developer in Bratislava. I deploy what I build, debug it at the protocol level, and care about the details most people skip.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:13px;">
+        <a href="#projects" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#14111e;background:var(--c5,#ffd23f);padding:14px 22px;border-radius:15px;box-shadow:5px 5px 0 rgba(0,0,0,.32);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(0,0,0,.32);">see my projects ↓</a>
+        <a href="mailto:samuelstefansibik@gmail.com" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;background:transparent;border:2px solid rgba(255,255,255,.22);padding:13px 22px;border-radius:15px;transition:border-color .15s,background .15s;" style-hover="border-color:var(--c3,#46d3ff);background:rgba(70,211,255,.1);">say hi</a>
+      </div>
+    </div>
+
+    <div style="position:relative;height:380px;animation:popIn .8s cubic-bezier(.2,.8,.3,1) both .14s;">
+      <div data-tilt="" data-rot="-4" style="--rot:-4deg;position:absolute;top:24px;left:34px;width:228px;height:228px;border-radius:34px;overflow:hidden;transform:rotate(var(--rot));box-shadow:10px 10px 0 var(--c4,#b98bff);border:4px solid #f5f0ff;background:#221c33;">
+        <image-slot id="sticker-avatar" shape="rect" placeholder="drop a photo" style="width:100%;height:100%;display:block;"></image-slot>
+      </div>
+      <div style="position:absolute;top:-6px;right:18px;font-family:'Space Mono',monospace;font-weight:700;font-size:12px;color:#14111e;background:var(--c3,#46d3ff);padding:9px 14px;border-radius:14px;transform:rotate(6deg);box-shadow:4px 4px 0 rgba(0,0,0,.3);animation:bobA 4.2s ease-in-out infinite;">Python · C# · Lua</div>
+      <div style="position:absolute;bottom:54px;right:0;font-family:'Space Mono',monospace;font-weight:700;font-size:12px;color:#f5f0ff;background:#221c33;border:2px solid var(--c2,#b8f24a);padding:9px 14px;border-radius:14px;transform:rotate(-5deg);box-shadow:4px 4px 0 rgba(0,0,0,.3);animation:bobB 5s ease-in-out infinite .4s;">self-hosting nerd</div>
+      <div style="position:absolute;bottom:0;left:8px;font-family:'Space Mono',monospace;font-weight:700;font-size:12px;color:#14111e;background:var(--c5,#ffd23f);padding:9px 14px;border-radius:14px;transform:rotate(4deg);box-shadow:4px 4px 0 rgba(0,0,0,.3);animation:bobC 4.6s ease-in-out infinite .2s;">DM &amp; worldbuilder</div>
+      <div style="position:absolute;top:96px;right:-6px;width:54px;height:54px;border-radius:50%;background:var(--c1,#ff6f61);box-shadow:4px 4px 0 rgba(0,0,0,.3);animation:wobble 4s ease-in-out infinite;"></div>
+    </div>
+  </header>
+
+  <section id="projects" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:48px 26px 30px;scroll-margin-top:80px;">
+    <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;margin-bottom:36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <span data-tilt="" data-rot="-3" style="--rot:-3deg;transform:rotate(var(--rot));font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:#14111e;background:var(--c2,#b8f24a);padding:7px 13px;border-radius:11px;box-shadow:3px 3px 0 rgba(0,0,0,.3);">01 / PROJECTS</span>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.8px;margin:0;">Things I’ve built &amp; shipped</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:28px;">
+
+      <article data-reveal="" data-tilt="" data-rot="-1.2" style="--rot:-1.2deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .25s;background:#211b32;border:2px solid rgba(255,255,255,.1);border-radius:26px;overflow:hidden;box-shadow:10px 10px 0 var(--c1,#ff6f61);" style-hover="transform:translateY(-6px) rotate(0deg);box-shadow:14px 14px 0 var(--c1,#ff6f61);">
+        <div style="display:grid;grid-template-columns:340px 1fr;">
+          <div style="position:relative;background:#161126;border-right:2px solid rgba(255,255,255,.08);min-height:250px;">
+            <img src="assets/codex-cover.png" alt="G.U.I.D.E. Codex — character dossier screen" style="width:100%;height:100%;min-height:250px;object-fit:cover;object-position:top left;display:block;">
+            <span style="position:absolute;top:14px;left:14px;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;color:#14111e;background:var(--c5,#ffd23f);padding:6px 11px;border-radius:10px;transform:rotate(-4deg);box-shadow:3px 3px 0 rgba(0,0,0,.35);animation:starBob 3.6s ease-in-out infinite;">★ FLAGSHIP</span>
+          </div>
+          <div style="padding:26px 30px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:var(--c1,#ff6f61);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;font-size:18px;transform:rotate(-5deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">01</span>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end;">
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">React</span>
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">TypeScript</span>
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">Supabase</span>
+              </div>
+            </div>
+            <h3 aria-label="G.U.I.D.E. Codex" style="margin:6px 0 12px;line-height:0;">
+              <svg width="244" viewBox="0 0 490 130" role="img" aria-label="G.U.I.D.E. Codex — Operator Console" style="display:block;height:auto;overflow:visible;">
+                <polygon points="75,27 108,46 108,84 75,103 42,84 42,46" fill="#1d1d1d" stroke="#d4bf7d" stroke-width="2"></polygon>
+                <polygon points="75,34 102,49.5 102,80.5 75,96 48,80.5 48,49.5" fill="none" stroke="#d4bf7d" stroke-width="0.8" opacity="0.5"></polygon>
+                <polyline points="66,44 87,65 66,86" fill="none" stroke="#00a6d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                <polyline points="102,49 95,66 104,77 92,94" fill="none" stroke="#e2b021" stroke-width="1.6" stroke-linecap="round" opacity="0.9"></polyline>
+                <text x="140" y="72" font-family="'Cinzel', serif" font-size="40" font-weight="700" fill="#d4bf7d">G.U.I.D.E<tspan fill="#e2b021">.</tspan></text>
+                <text x="142" y="98" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="3" fill="#8a8a8a"><tspan fill="#00a6d6">CODEX</tspan> // OPERATOR CONSOLE</text>
+              </svg>
+            </h3>
+            <p style="font-size:15.5px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0 0 18px;max-width:620px;">A custom character-management web app for a tabletop campaign — part character sheet, part DM control panel — themed as an in-world neural implant that’s secretly the campaign’s villain.</p>
+            <button data-target="codex" aria-expanded="false" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;color:#14111e;background:var(--c1,#ff6f61);border:none;padding:10px 16px;border-radius:12px;cursor:pointer;box-shadow:3px 3px 0 rgba(0,0,0,.3);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(0,0,0,.3);">peek inside <span data-arrow="" style="display:inline-block;transition:transform .3s;">▼</span></button>
+          </div>
+        </div>
+        <div data-detail="codex" data-open="0" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.3,1),opacity .4s ease;">
+          <div style="padding:8px 30px 30px;">
+            <p style="font-size:14.5px;line-height:1.7;color:#c6bdda;font-weight:600;max-width:760px;margin:18px 0 22px;">Players spend the whole game inside a helpful-looking interface that’s quietly watching and corrupting them — dramatic irony baked into the visuals. The player side is cyan and reassuring; <span style="color:var(--c5,#ffd23f);">amber is the “system-truth” color</span> that leaks through in unsettling moments. The DM console is amber-forward, because that’s where the truth lives.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;">
+              <figure style="margin:0;">
+                <a href="assets/codex-a.png" target="_blank" rel="noopener"><img src="assets/codex-a.png" alt="Player equipment grid" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;display:block;border-radius:14px;border:3px solid var(--c3,#46d3ff);"></a>
+                <figcaption style="font-family:'Space Mono',monospace;font-size:10.5px;font-weight:700;color:var(--c3,#46d3ff);margin-top:9px;">PLAYER · equipment</figcaption>
+              </figure>
+              <figure style="margin:0;">
+                <a href="assets/codex-c.png" target="_blank" rel="noopener"><img src="assets/codex-c.png" alt="Player Codex hub" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center;display:block;border-radius:14px;border:3px solid var(--c3,#46d3ff);"></a>
+                <figcaption style="font-family:'Space Mono',monospace;font-size:10.5px;font-weight:700;color:var(--c3,#46d3ff);margin-top:9px;">PLAYER · codex hub</figcaption>
+              </figure>
+              <figure style="margin:0;">
+                <a href="assets/codex-b.png" target="_blank" rel="noopener"><img src="assets/codex-b.png" alt="DM Operator Console" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;display:block;border-radius:14px;border:3px solid var(--c5,#ffd23f);"></a>
+                <figcaption style="font-family:'Space Mono',monospace;font-size:10.5px;font-weight:700;color:var(--c5,#ffd23f);margin-top:9px;">DM · operator console</figcaption>
+              </figure>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+              <span style="font-family:'Space Mono',monospace;font-size:12px;color:#a99ec4;font-weight:700;">stack: Vite · React · TS · Supabase (Postgres/Auth/Realtime) · magic-link auth</span>
+              <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#14111e;background:var(--c2,#b8f24a);padding:5px 11px;border-radius:9px;">player screens shipped · DM next</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article data-reveal="" data-tilt="" data-rot="1.4" style="--rot:1.4deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .25s;background:#211b32;border:2px solid rgba(255,255,255,.1);border-radius:26px;overflow:hidden;box-shadow:10px 10px 0 var(--c3,#46d3ff);" style-hover="transform:translateY(-6px) rotate(0deg);box-shadow:14px 14px 0 var(--c3,#46d3ff);">
+        <div style="display:grid;grid-template-columns:340px 1fr;">
+          <div style="position:relative;background:#161126;border-right:2px solid rgba(255,255,255,.08);min-height:230px;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;padding:22px;">
+              <div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:40px;color:var(--c3,#46d3ff);line-height:1;">@</div>
+              <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#7e7398;margin-top:10px;">telegram → calendar</div>
+            </div>
+          </div>
+          <div style="padding:26px 30px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:var(--c3,#46d3ff);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;font-size:18px;transform:rotate(5deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">02</span>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end;">
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">Python</span>
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">Anthropic API</span>
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">Oracle Cloud</span>
+              </div>
+            </div>
+            <h3 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:25px;letter-spacing:-.4px;margin:6px 0 10px;">AI Calendar Assistant</h3>
+            <p style="font-size:15.5px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0 0 18px;max-width:620px;">An end-to-end assistant that manages my calendar through natural-language Telegram messages — deployed, running under systemd, and debugged in production.</p>
+            <button data-target="calendar" aria-expanded="false" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;color:#14111e;background:var(--c3,#46d3ff);border:none;padding:10px 16px;border-radius:12px;cursor:pointer;box-shadow:3px 3px 0 rgba(0,0,0,.3);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(0,0,0,.3);">peek inside <span data-arrow="" style="display:inline-block;transition:transform .3s;">▼</span></button>
+          </div>
+        </div>
+        <div data-detail="calendar" data-open="0" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.3,1),opacity .4s ease;">
+          <div style="padding:8px 30px 30px;">
+            <p style="font-size:14.5px;line-height:1.7;color:#c6bdda;font-weight:600;max-width:760px;margin:18px 0 20px;">Built with Flask and the Anthropic API (Haiku), integrated with Google Calendar via OAuth. Deployed on an Oracle Cloud free-tier VM (Ubuntu 22.04) under systemd, with Tailscale for secure remote access. The fun part was the real production debugging: OAuth token expiry, Node version conflicts, and switching providers to beat rate-limiting.</p>
+            <span style="font-family:'Space Mono',monospace;font-size:12px;color:#a99ec4;font-weight:700;">stack: Python · Flask · Anthropic API · Google Calendar API · Oracle Cloud · systemd · Tailscale</span>
+          </div>
+        </div>
+      </article>
+
+      <article data-reveal="" data-tilt="" data-rot="-1.4" style="--rot:-1.4deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .25s;background:#211b32;border:2px solid rgba(255,255,255,.1);border-radius:26px;overflow:hidden;box-shadow:10px 10px 0 var(--c4,#b98bff);" style-hover="transform:translateY(-6px) rotate(0deg);box-shadow:14px 14px 0 var(--c4,#b98bff);">
+        <div style="display:grid;grid-template-columns:340px 1fr;">
+          <div style="position:relative;background:#161126;border-right:2px solid rgba(255,255,255,.08);min-height:224px;display:flex;align-items:center;justify-content:center;">
+            <div style="font-family:'Space Mono',monospace;font-size:11px;line-height:1.9;color:rgba(185,139,255,.7);padding:18px;font-weight:700;white-space:pre;">.method ldstr<br>&nbsp; "loc_key"<br>&nbsp; call Translate<br>&nbsp; // patched @ IL<br>&nbsp; ret</div>
+          </div>
+          <div style="padding:26px 30px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:var(--c4,#b98bff);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;font-size:18px;transform:rotate(-5deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">03</span>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end;">
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">C# / IL</span>
+                <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">dnSpyEx</span>
+              </div>
+            </div>
+            <h3 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:25px;letter-spacing:-.4px;margin:6px 0 10px;">Mod Engineering</h3>
+            <p style="font-size:15.5px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0 0 18px;max-width:620px;">Deep technical work on a community character mod — patching compiled C# assemblies at the IL level and hunting down a subtle multiplayer desync.</p>
+            <button data-target="mod" aria-expanded="false" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;color:#14111e;background:var(--c4,#b98bff);border:none;padding:10px 16px;border-radius:12px;cursor:pointer;box-shadow:3px 3px 0 rgba(0,0,0,.3);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(0,0,0,.3);">peek inside <span data-arrow="" style="display:inline-block;transition:transform .3s;">▼</span></button>
+          </div>
+        </div>
+        <div data-detail="mod" data-open="0" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.3,1),opacity .4s ease;">
+          <div style="padding:8px 30px 30px;">
+            <p style="font-size:14.5px;line-height:1.7;color:#c6bdda;font-weight:600;max-width:760px;margin:18px 0 20px;">Fixed localization by patching hardcoded string literals at the IL level inside compiled C# assemblies using dnSpyEx — no source access. Then diagnosed a multiplayer desync caused by non-deterministic RNG consumption flowing through a non-networked field, and reported the findings back to the mod authors to fold upstream.</p>
+            <span style="font-family:'Space Mono',monospace;font-size:12px;color:#a99ec4;font-weight:700;">skills: reverse engineering · IL patching · C# · debugging networked state</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;">
+      <article data-reveal="" data-tilt="" data-rot="1.6" style="--rot:1.6deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .25s;background:#211b32;border:2px solid rgba(255,255,255,.1);border-radius:24px;padding:26px;box-shadow:9px 9px 0 var(--c2,#b8f24a);" style-hover="transform:translateY(-6px) rotate(0deg);box-shadow:13px 13px 0 var(--c2,#b8f24a);">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:var(--c2,#b8f24a);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;font-size:17px;transform:rotate(-5deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">04</span>
+          <div style="display:flex;gap:7px;">
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">NeoForge</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">Lua</span>
+          </div>
+        </div>
+        <h3 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;margin:0 0 8px;">Server Hosting</h3>
+        <p style="font-size:14.5px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0;">Set up and ran a private NeoForge (Minecraft) server for 4 friends, and built in-game computing projects with CC:Tweaked. <span style="color:#8d82a8;">Server admin, Lua, systems design.</span></p>
+      </article>
+      <article data-reveal="" data-tilt="" data-rot="-1.6" style="--rot:-1.6deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .25s;background:#211b32;border:2px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;box-shadow:9px 9px 0 var(--c5,#ffd23f);" style-hover="transform:translateY(-6px) rotate(0deg);box-shadow:13px 13px 0 var(--c5,#ffd23f);">
+        <div style="min-height:120px;background:#161126;border-bottom:2px solid rgba(255,255,255,.08);">
+          <image-slot id="sticker-brettany" shape="rect" placeholder="drop a map / lore art" style="width:100%;height:120px;display:block;"></image-slot>
+        </div>
+        <div style="padding:22px 26px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:var(--c5,#ffd23f);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;font-size:17px;transform:rotate(5deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">05</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.06);padding:5px 10px;border-radius:9px;">worldbuilding</span>
+          </div>
+          <h3 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;margin:0 0 8px;">Brettany</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0;">A long-running D&amp;D worldbuilding project — lore across military, religious, trade and infrastructure systems, plus a homebrew class. Built to welcome friends new to the hobby. <span style="color:#8d82a8;">Systems design, writing, docs.</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:56px 26px;scroll-margin-top:80px;">
+    <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;margin-bottom:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <span data-tilt="" data-rot="2.5" style="--rot:2.5deg;transform:rotate(var(--rot));font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:#14111e;background:var(--c3,#46d3ff);padding:7px 13px;border-radius:11px;box-shadow:3px 3px 0 rgba(0,0,0,.3);">02 / TOOLKIT</span>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.8px;margin:0;">My sticker pack of skills</h2>
+    </div>
+    <div data-reveal="" data-pop-children="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;">
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#ff6f61;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">languages &amp; runtimes</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Python</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">C#</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">JavaScript / Node.js</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">GDScript</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Java</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Lua</span>
+        </div>
+      </div>
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#46d3ff;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">backend / services</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Flask</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">REST APIs</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">OAuth flows</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">systemd</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Linux</span>
+        </div>
+      </div>
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#b8f24a;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">cloud / infra</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#b8f24a;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Oracle Cloud</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#b8f24a;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Tailscale</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#b8f24a;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">self-hosted</span>
+        </div>
+      </div>
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#b98bff;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">automation</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#b98bff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Make (Integromat)</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#b98bff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">scheduled scraping</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#b98bff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">pipelines</span>
+        </div>
+      </div>
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#ffd23f;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">AI integration</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ffd23f;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Anthropic API</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ffd23f;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">LangChain</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ffd23f;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">agent frameworks</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ffd23f;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">prompts</span>
+        </div>
+      </div>
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#ff6f61;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">reverse engineering</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">dnSpyEx</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">IL patching</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#ff6f61;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">networked-state debugging</span>
+        </div>
+      </div>
+
+      <div style="background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <span style="width:14px;height:14px;border-radius:5px;background:#46d3ff;transform:rotate(-8deg);"></span>
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#f5f0ff;">tooling I enjoy</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">JetBrains Suite</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Obsidian</span>
+          <span data-pop="" style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);padding:6px 11px;border-radius:11px;transition:background .15s,color .15s,box-shadow .15s;" style-hover="background:#46d3ff;color:#14111e;box-shadow:3px 3px 0 rgba(0,0,0,.28);">Git</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:40px 26px 56px;scroll-margin-top:80px;">
+    <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <span data-tilt="" data-rot="-2.5" style="--rot:-2.5deg;transform:rotate(var(--rot));font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:#14111e;background:var(--c4,#b98bff);padding:7px 13px;border-radius:11px;box-shadow:3px 3px 0 rgba(0,0,0,.3);">03 / ABOUT</span>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.8px;margin:0;">How I work &amp; what I’m about</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;display:flex;gap:16px;align-items:flex-start;background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:20px;padding:20px 22px;">
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:var(--c1,#ff6f61);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;transform:rotate(-6deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">1</span>
+          <p style="font-size:15px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0;">I finish what I start. Leaving things undone breathes down my neck — I can’t stop thinking about it until it’s done.</p>
+        </div>
+        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;display:flex;gap:16px;align-items:flex-start;background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:20px;padding:20px 22px;">
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:var(--c3,#46d3ff);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;transform:rotate(5deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">2</span>
+          <p style="font-size:15px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0;">If something needs a deep fix or a deep dive, I’ll do it. I like looking at systems from the inside — how they work, and why they don’t.</p>
+        </div>
+        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;display:flex;gap:16px;align-items:flex-start;background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:20px;padding:20px 22px;">
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:var(--c2,#b8f24a);color:#14111e;font-family:'Fredoka',sans-serif;font-weight:700;transform:rotate(-4deg);box-shadow:3px 3px 0 rgba(0,0,0,.3);">3</span>
+          <p style="font-size:15px;line-height:1.6;color:#c6bdda;font-weight:600;margin:0;">I sweat the details and ask a lot of follow-up questions. If something’s missing, I ask what it needs — then I build that too.</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div data-reveal="" data-tilt="" data-rot="2" style="--rot:2deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .6s ease;background:var(--c5,#ffd23f);color:#14111e;border-radius:20px;padding:24px;box-shadow:8px 8px 0 rgba(0,0,0,.32);">
+          <p style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:21px;line-height:1.3;margin:0;">“I like systems I can take apart, understand, and rebuild better.”</p>
+        </div>
+        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;background:#211b32;border:2px solid rgba(255,255,255,.09);border-radius:20px;padding:22px;">
+          <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--c3,#46d3ff);margin-bottom:12px;">BEYOND CODE</div>
+          <p style="font-size:14.5px;line-height:1.65;color:#c6bdda;font-weight:600;margin:0 0 14px;">A tinkerer outside of work too. Modding makes me happy - when something breaks I debug it, write fixes, and report findings back to mod authors. I build an elaborate world for the D&amp;D campaigns I run, and I’m into hardware: PC builds, keyboards. Usually with music on.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px;">
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);padding:5px 10px;border-radius:10px;">game modding</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);padding:5px 10px;border-radius:10px;">worldbuilding</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);padding:5px 10px;border-radius:10px;">D&amp;D / DMing</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#cfc6e6;background:rgba(255,255,255,.05);padding:5px 10px;border-radius:10px;">keyboards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:30px 26px 60px;scroll-margin-top:80px;">
+    <div data-reveal="" data-tilt="" data-rot="-1" style="--rot:-1deg;opacity:0;transform:translateY(20px) rotate(var(--rot));transition:opacity .6s ease,transform .6s ease;background:linear-gradient(135deg,var(--c4,#b98bff),var(--c1,#ff6f61),var(--c4,#b98bff));background-size:220% 220%;animation:gradPan 7s ease-in-out infinite alternate;border-radius:30px;padding:52px 40px;text-align:center;box-shadow:12px 12px 0 rgba(0,0,0,.32);">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#14111e;margin-bottom:14px;">04 / SAY HELLO</div>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(30px,4.6vw,52px);letter-spacing:-1px;line-height:1.05;color:#14111e;margin:0 0 16px;">Got a system worth<br>taking apart together?</h2>
+      <p style="font-size:16px;line-height:1.55;color:rgba(20,17,30,.82);font-weight:700;max-width:480px;margin:0 auto 30px;">Open to internships and side projects — automation, self-hosted services, or anything that needs someone who’ll actually finish it.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:13px;justify-content:center;">
+        <a href="mailto:samuelstefansibik@gmail.com" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px;color:#f5f0ff;background:#14111e;padding:15px 24px;border-radius:16px;box-shadow:5px 5px 0 rgba(0,0,0,.25);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(0,0,0,.25);">samuelstefansibik@gmail.com</a>
+        <a href="https://github.com/NotAsami" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px;color:#14111e;background:#f5f0ff;padding:15px 24px;border-radius:16px;box-shadow:5px 5px 0 rgba(0,0,0,.25);transition:transform .15s,box-shadow .15s;" style-hover="transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(0,0,0,.25);">github.com/NotAsami ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:24px 26px 40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;">
+    <span style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#6f6488;">© 2026 Sam · built &amp; deployed by hand</span>
+    <span style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#6f6488;">Bratislava, SK</span>
+  </footer>
+
+</div>
+</body>
+</html>
