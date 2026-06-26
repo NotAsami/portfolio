@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="sam">
+  <rect x="12" y="12" width="76" height="76" rx="24" fill="#ff5d8f"/>
+  <text x="50" y="52" text-anchor="middle" dominant-baseline="central"
+        font-family="'Trebuchet MS', Verdana, Geneva, sans-serif"
+        font-size="60" font-weight="700" fill="#14111e">S</text>
+</svg>
