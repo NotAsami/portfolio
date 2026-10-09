@@ -1,1 +1,14 @@
 .DS_Store
+
+# Original uploads; the site ships the compressed copies in assets/web/
+assets/Pasted *.png
+assets/guide-demo.mp4
+assets/hero.jpg
+assets/brettany-map.webp
+
+# Local tooling state
+.codex/
+.impeccable/config.local.json
+.impeccable/hook.cache.json
+.impeccable/questions/
+.impeccable/review/
