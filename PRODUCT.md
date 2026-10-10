@@ -16,7 +16,7 @@ A personal web presence: "let people know about me on the internet." It shows wh
 
 ## Positioning
 
-A CS student and automation developer in Bratislava who finishes what they start and likes taking systems apart from the inside: IL-patching compiled mods, production-debugging a self-hosted assistant, and building a custom TTRPG platform for their own table. The projects are real, deployed and used.
+A CS student and automation developer from Slovakia who finishes what they start and likes taking systems apart from the inside: IL-patching compiled mods, production-debugging a self-hosted assistant, and building a custom TTRPG platform for their own table. The projects are real, deployed and used.
 
 ## Operating Context
 
