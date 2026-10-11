@@ -62,6 +62,17 @@
     });
   }
 
+  // Theme button: flips data-theme and remembers the choice.
+  const root = document.documentElement;
+  const themeBtn = document.querySelector('.theme');
+  const syncTheme = () => themeBtn.setAttribute('aria-pressed', root.dataset.theme === 'dark');
+  syncTheme();
+  themeBtn.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    try { localStorage.theme = root.dataset.theme; } catch (e) {}
+    syncTheme();
+  });
+
   // Reduced motion: don't autoplay the demo; the controls stay.
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('video[autoplay]').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
