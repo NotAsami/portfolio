@@ -527,6 +527,21 @@ html:has(.viewer[open]){overflow:hidden}
 
         <article class="entry">
           <div class="entry-head">
+            <h3>Network debugging</h3>
+            <span class="cell">Fixed</span>
+            <span class="mono">Windows · ping · router config</span>
+          </div>
+          <div class="prose">
+            <p>My old router was extremely unstable: normal ping, then jumps to 3,000&nbsp;ms. The new router fixed the spikes, but in games I now sat at a steady ~230&nbsp;ms, while speedtest.net said everything was fine. I debugged it extensively, mostly with the ping command and by trying options in the router itself, until it turned out the router wasn't the problem at all: Windows was putting the USB port with my Wi-Fi adapter to sleep.</p>
+          </div>
+          <ul class="changes">
+            <li><span class="what">Spikes</span><span class="delta"><s>up to 3,000&nbsp;ms</s><svg class="icon"><use href="#i-to"/></svg><b>gone with the new router</b></span></li>
+            <li><span class="what">In-game ping</span><span class="delta"><s>steady ~230&nbsp;ms</s><svg class="icon"><use href="#i-to"/></svg><b>USB sleep off, ~18&nbsp;ms to Frankfurt (4&nbsp;ms on speedtest)</b></span></li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
             <h3>Elyndor</h3>
             <span class="cell">Long-running</span>
             <span class="mono">worldbuilding · writing · docs</span>
