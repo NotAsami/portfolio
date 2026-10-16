@@ -150,7 +150,9 @@ ul{padding:0;list-style:none}
 .protector figcaption{font-size:var(--small);color:var(--ink-soft);padding:9px 2px 0}
 
 /* G.U.I.D.E. sheet */
-.guide-top{display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px;margin-bottom:22px}
+.guide-top{display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px;margin-bottom:22px}
+.guide-top .lede{flex:1 1 300px}
+.guide-video .prose{margin-top:24px}
 .wordmark{background:#1d1d1d;color:#d4bf7d;border-radius:4px;padding:8px 20px 8px 12px;box-shadow:0 2px 4px rgba(20,17,30,.25)}
 .wordmark svg{display:block;width:clamp(220px,28vw,300px);height:auto}
 .guide-hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:28px 36px;align-items:start;margin:26px 0 34px}
@@ -407,20 +409,25 @@ html:has(.viewer[open]){overflow:hidden}
             <text x="142" y="98" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="3" fill="#8a8a8a"><tspan fill="#00a6d6">CODEX</tspan> // OPERATOR CONSOLE</text>
           </svg>
         </h2>
-        <span class="dymo dymo--pink">New · Foundry VTT module &amp; major refactors!</span>
+        <p class="lede">An open-source character-management web app for my tabletop campaign. Players get their character sheet, I get an operator console. In the story it's a helpful neural implant. It is also [REDACTED].</p>
       </div>
 
-      <p class="lede">An open-source character-management web app for my tabletop campaign. Players get their character sheet, I get an operator console. In the story it's a helpful neural implant. It is also [REDACTED].</p>
-
       <div class="guide-hero">
-        <figure class="protector">
-        <video poster="./assets/web/guide-demo-poster.webp" width="1280" height="720" muted loop playsinline autoplay controls preload="metadata" aria-label="Demo of G.U.I.D.E. in use">
-          <source src="./assets/web/guide-demo.webm" type="video/webm">
-          <source src="./assets/web/guide-demo.mp4" type="video/mp4">
-        </video>
-        <figcaption class="note">A small showcase of the app. (Disclaimer: some stuff may be outdated)</figcaption>
-      </figure>
+        <div class="guide-video">
+          <figure class="protector">
+            <video poster="./assets/web/guide-demo-poster.webp" width="1280" height="720" muted loop playsinline autoplay controls preload="metadata" aria-label="Demo of G.U.I.D.E. in use">
+              <source src="./assets/web/guide-demo.webm" type="video/webm">
+              <source src="./assets/web/guide-demo.mp4" type="video/mp4">
+            </video>
+            <figcaption class="note">A small showcase of the app. (Disclaimer: some stuff may be outdated)</figcaption>
+          </figure>
+          <div class="prose">
+            <p>Players spend the whole game inside an interface, acting as their helpful guide. The player side is cyan and reassuring. Amber is the system-truth colour, and it leaks through sometimes. The operator console is amber all the way down, because that's where the truth is.</p>
+            <p><a href="https://github.com/NotAsami/GUIDE-webapp" target="_blank" rel="noopener"><strong>Read the code on GitHub</strong> <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+          </div>
+        </div>
         <div class="foundry">
+          <span class="dymo dymo--pink">New · Foundry VTT module &amp; major refactors!</span>
           <h3>Now with Foundry link!</h3>
           <p>A Foundry VTT module links the virtual table and the app. It's still a work in progress, but the most important parts work.</p>
           <ul class="changes">
@@ -430,10 +437,6 @@ html:has(.viewer[open]){overflow:hidden}
           </ul>
         </div>
       </div>
-      <div class="prose">
-          <p>Players spend the whole game inside an interface, acting as their helpful guide. The player side is cyan and reassuring. Amber is the system-truth colour, and it leaks through sometimes. The operator console is amber all the way down, because that's where the truth is.</p>
-          <p><a href="https://github.com/NotAsami/GUIDE-webapp" target="_blank" rel="noopener"><strong>Read the code on GitHub</strong> <svg class="icon"><use href="#i-arrow"/></svg></a></p>
-        </div>
 
       <div class="handouts">
         <h3>Player side</h3>
