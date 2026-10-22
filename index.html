@@ -84,6 +84,7 @@ ul{padding:0;list-style:none}
 .clip img{width:168px;height:168px;object-fit:cover;border-radius:4px;transform:rotate(-2deg);box-shadow:0 2px 3px rgba(0,0,0,.4),0 14px 30px -12px rgba(0,0,0,.7)}
 .clip svg{position:absolute;z-index:1;top:-18px;left:22px;width:26px;height:64px;color:var(--on-ground-soft)}
 .cover h1{font-size:var(--display);line-height:1;font-weight:900;letter-spacing:-.03em;margin:0 0 10px}
+.cover .aka{color:var(--lilac);font-weight:700;margin:-4px 0 10px}
 .cover .oneliner{color:var(--on-ground);font-weight:800;margin-bottom:12px}
 .clip .dymo{position:absolute;left:-6px;bottom:-12px;transform:rotate(3deg);z-index:1}
 .cover p{color:var(--on-ground-soft);max-width:34ch}
@@ -289,6 +290,7 @@ html:has(.viewer[open]){overflow:hidden}
   .clip img{width:64px;height:64px}
   .clip svg,.clip .dymo{display:none}
   .cover h1{font-size:2.2rem}
+  .cover .aka{margin:2px 0 0;font-size:var(--small)}
   .cover .oneliner{margin:2px 0 0}
   .rail{
     position:fixed;left:0;right:0;bottom:0;top:auto;height:auto;z-index:10;
@@ -367,11 +369,12 @@ html:has(.viewer[open]){overflow:hidden}
     <div class="id-row">
       <div class="clip">
         <svg viewBox="0 0 26 64" aria-hidden="true"><path d="M8 40V10a5 5 0 0 1 10 0v40a8 8 0 0 1-16 0V16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-        <img src="./assets/web/avatar.webp" width="460" height="460" alt="Sam's avatar: an anime-style portrait with white-and-cyan hair">
-        <span class="dymo" aria-hidden="true">Property of NotAsami (Sam)</span>
+        <img src="./assets/web/avatar.webp" width="460" height="460" alt="Sam's avatar: a grinning black cartoon character with a green mask and big blue eyes on a speckled red background">
+        <span class="dymo" aria-hidden="true">Property of NotAsami</span>
       </div>
       <div>
         <h1>I'm Sam.</h1>
+        <p class="aka">Also known as NotAsami</p>
         <p class="oneliner">I build stuff, ranging from web apps to C# mods.</p>
       </div>
       <button class="theme" type="button" aria-label="Dark pages" aria-pressed="false"><svg class="icon i-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon i-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
