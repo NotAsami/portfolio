@@ -24,6 +24,6 @@ I ran more tests while downstairs, got data that suggested the distance was the 
 
 I returned upstairs with the setup, ran pings again and lo and behold, tweaks did help: 5 ms min, 14 ms max.
 
-This fixed the issue which was plaguing me for 5 YEARS!!! My old router was a hunk-a-junk, it was slow, unreliable and unstable. I got at least 1 4000 ms lagout per game of LoL, now, most lags I get is about 70 ms for 2 seconds and then I’m back to 18 ms, while having internet that is about 6x faster than the last one. All in all a preem debug session, had to relocate my entire setup but I finally don’t get lag and can’t blame my internet for my skill issues.
+This fixed the issue which was plaguing me for 5 YEARS!!! My old router was a hunk-a-junk, it was slow, unreliable and unstable. I got at least **one** 4000 ms lagout per game of LoL, now, most lags I get is about 70 ms for 2 seconds and then I’m back to 18 ms, while having internet that is about 6x faster than the last one. All in all a preem debug session, had to relocate my entire setup but I finally don’t get lag and can’t blame my internet for my skill issues.
 
 Thanks for listening!
