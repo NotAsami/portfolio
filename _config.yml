@@ -1,0 +1,25 @@
+title: Sam (NotAsami)
+description: Log entries from Sam (NotAsami): debugging journeys, G.U.I.D.E. updates, advice, mods and whatever else.
+url: https://notasami.dev
+author: Sam
+permalink: /log/:title/
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: log/feed.xml
+
+exclude:
+  - PRODUCT.md
+  - DESIGN.md
+  - preview/
+  - .idea/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

@@ -27,6 +27,7 @@
   --peri:#7c8bff;
   --cyan:#46d3ff;
   --orange:#ff9f43;
+  --lime:#b8f25c;
   --grid:rgba(124,139,255,.16);
   --rule:rgba(20,17,30,.16);
   --sans:'Recursive',system-ui,sans-serif;
@@ -94,6 +95,10 @@ ul{padding:0;list-style:none}
 .cover .gh:hover{color:var(--cyan)}
 .cover .lost{margin-top:22px;color:var(--lilac);max-width:30ch}
 .cover .lost a{color:var(--lilac)}
+.cover .latest{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px;font-weight:700;text-decoration:none}
+.cover .latest .dymo{background:var(--lime);color:var(--ground)}
+.cover .latest span:last-child{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:1.5px;text-underline-offset:.22em}
+.cover .latest:hover span:last-child{color:var(--lime)}
 
 /* Pages */
 .pages{display:flex;flex-direction:column;gap:28px;min-width:0}
@@ -244,6 +249,7 @@ ul{padding:0;list-style:none}
 .t-toolkit{--tab:var(--orange)}
 .t-about{--tab:var(--lilac)}
 .t-hi{--tab:var(--peri)}
+.t-log{--tab:var(--lime)}
 
 /* Image viewer: a sleeve lifted out onto the cover */
 html:has(.viewer[open]){overflow:hidden}
@@ -387,6 +393,7 @@ html:has(.viewer[open]){overflow:hidden}
         <li><span class="dymo">DM · Worldbuilder · Gamer</span></li>
       </ul>
       <a class="gh" href="https://github.com/NotAsami" target="_blank" rel="noopener"><svg class="icon"><use href="#i-gh"/></svg>github.com/NotAsami<svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a class="latest" href="/log/how-i-fixed-a-5-year-network-problem/"><span class="dymo">Latest log</span><span>How I fixed a 5 year network problem</span></a>
       <p class="lost note">If found, return via the <a href="#say-hi">back pocket</a>.</p>
     </div>
   </header>
@@ -538,11 +545,12 @@ html:has(.viewer[open]){overflow:hidden}
             <span class="mono">Windows · ping · router config</span>
           </div>
           <div class="prose">
-            <p>My old router was extremely unstable: normal ping, then jumps to 3,000&nbsp;ms. The new router fixed the spikes, but in games I now sat at a steady ~230&nbsp;ms, while speedtest.net said everything was fine. I debugged it extensively, mostly with the ping command and by trying options in the router itself, until it turned out the router wasn't the problem at all: Windows was putting the USB port with my Wi-Fi adapter to sleep.</p>
+            <p>My old router was extremely unstable: normal ping, then jumps to 4,000&nbsp;ms. The new router fixed the spikes, but in games I now sat at a steady ~170&nbsp;ms, while speedtest.net said everything was fine. I debugged it extensively, mostly with the ping command and by trying options in the router itself, until it turned out the router wasn't the problem at all: Windows was putting the USB port with my Wi-Fi adapter to sleep.</p>
+            <p><a href="/log/how-i-fixed-a-5-year-network-problem/"><strong>Read the full story in the log</strong> <svg class="icon"><use href="#i-arrow"/></svg></a></p>
           </div>
           <ul class="changes">
-            <li><span class="what">Spikes</span><span class="delta"><s>up to 3,000&nbsp;ms</s><svg class="icon"><use href="#i-to"/></svg><b>gone with the new router</b></span></li>
-            <li><span class="what">In-game ping</span><span class="delta"><s>steady ~230&nbsp;ms</s><svg class="icon"><use href="#i-to"/></svg><b>USB sleep off, ~18&nbsp;ms to Frankfurt (4&nbsp;ms on speedtest)</b></span></li>
+            <li><span class="what">Spikes</span><span class="delta"><s>up to 4,000&nbsp;ms</s><svg class="icon"><use href="#i-to"/></svg><b>gone with the new router</b></span></li>
+            <li><span class="what">In-game ping</span><span class="delta"><s>steady ~170&nbsp;ms</s><svg class="icon"><use href="#i-to"/></svg><b>USB sleep off, ~18&nbsp;ms to Frankfurt (4&nbsp;ms on speedtest)</b></span></li>
           </ul>
         </article>
 
@@ -621,10 +629,11 @@ html:has(.viewer[open]){overflow:hidden}
 
   <nav class="rail" aria-label="Sections">
     <a class="t-guide" href="#guide" aria-current="true"><span class="l">G.U.I.D.E.</span><span class="s">Guide</span></a>
-    <a class="t-projects" href="#projects">Projects</a>
-    <a class="t-toolkit" href="#toolkit">Toolkit</a>
+    <a class="t-projects" href="#projects"><span class="l">Projects</span><span class="s">Work</span></a>
+    <a class="t-toolkit" href="#toolkit"><span class="l">Toolkit</span><span class="s">Tools</span></a>
     <a class="t-about" href="#about">About</a>
     <a class="t-hi" href="#say-hi">Say hi</a>
+    <a class="t-log" href="/log/">Log</a>
   </nav>
 </div>
 <dialog class="viewer" aria-label="Image viewer">

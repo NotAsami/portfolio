@@ -1,0 +1,104 @@
+/* Log pages: one loose-leaf sheet from the binder. Tokens mirror index.html. */
+:root{
+  --ground:#14111e;
+  --paper:#f5f0ff;
+  --ink:#14111e;
+  --ink-soft:#5a5272;
+  --on-ground:#f5f0ff;
+  --on-ground-soft:#b7aecb;
+  --lime:#b8f25c;
+  --peri:#7c8bff;
+  --grid:rgba(124,139,255,.16);
+  --rule:rgba(20,17,30,.16);
+  --tab:var(--lime);
+  --sans:'Recursive',system-ui,sans-serif;
+  --body:17px;
+  --small:13px;
+  --display:clamp(2.2rem,4.6vw,3.4rem);
+  color-scheme:dark;
+}
+[data-theme=dark] .sheet{
+  --paper:#221d33;--ink:#efe9ff;--ink-soft:#b7aecb;
+  --rule:rgba(245,240,255,.16);--grid:rgba(124,139,255,.1);
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 2px 4px rgba(0,0,0,.5),0 24px 48px -24px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box}
+html{scrollbar-color:#b98bff var(--ground);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--on-ground);font:400 var(--body)/1.6 var(--sans);font-variation-settings:'CASL' 0,'MONO' 0}
+::selection{background:#ff5d8f;color:var(--ground)}
+:focus-visible{outline:3px solid #46d3ff;outline-offset:3px;border-radius:3px}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1.5px}
+h1,h2,p,ul,ol{margin:0}
+ul{padding:0;list-style:none}
+.icon{width:1em;height:1em;flex:none;vertical-align:-.125em}
+.mono{font-variation-settings:'MONO' 1,'CASL' 0;font-variant-numeric:tabular-nums}
+
+.log{max-width:860px;margin:0 auto;padding:20px 16px 28px}
+.bar{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.home{display:inline-flex;align-items:center;gap:.35em;font-weight:700;text-decoration:none;min-height:44px}
+.home:hover{color:#46d3ff}
+.bar .dymo{margin-right:auto;text-decoration:none;background:var(--lime);color:var(--ground)}
+.theme{width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:#2a2440;color:var(--on-ground);cursor:pointer;font-size:20px}
+.theme:hover{background:#b98bff;color:var(--ground)}
+.theme .i-sun,[data-theme=dark] .theme .i-moon{display:none}
+[data-theme=dark] .theme .i-sun{display:block}
+
+.dymo{
+  display:inline-flex;align-items:center;
+  font:700 var(--small)/1 var(--sans);font-variation-settings:'MONO' 1;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--ground);color:var(--on-ground);
+  padding:.45em .7em .4em;border-radius:3px;white-space:nowrap;
+}
+
+/* The sheet: paper, grid, punched holes, the Log tab's band along the top */
+.sheet{
+  position:relative;background-color:var(--paper);color:var(--ink);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+  border-radius:3px 6px 6px 3px;
+  padding:clamp(32px,4vw,48px) clamp(20px,4vw,52px) clamp(32px,4vw,52px) clamp(56px,6vw,84px);
+  box-shadow:inset 0 10px 0 var(--tab),0 1px 0 rgba(255,255,255,.5) inset,0 2px 4px rgba(0,0,0,.35),0 24px 48px -24px rgba(0,0,0,.8);
+}
+[data-theme=dark] .sheet{box-shadow:inset 0 10px 0 var(--tab),0 2px 4px rgba(0,0,0,.5),0 24px 48px -24px rgba(0,0,0,.9)}
+.sheet::before{
+  content:"";position:absolute;left:clamp(14px,2vw,26px);top:0;bottom:0;width:24px;
+  --hole:radial-gradient(circle,var(--ground) 7.5px,rgba(124,139,255,.38) 8.5px,rgba(124,139,255,.38) 11px,transparent 12px);
+  background:var(--hole) 0 84px/24px 24px no-repeat,var(--hole) 0 50%/24px 24px no-repeat,var(--hole) 0 calc(100% - 84px)/24px 24px no-repeat;
+}
+.sheet a:hover{text-decoration-color:var(--peri)}
+
+.meta{font-size:var(--small);color:var(--ink-soft)}
+.log-title,.post h1{font-size:var(--display);line-height:1.04;font-weight:900;letter-spacing:-.03em;text-wrap:balance;margin:6px 0 14px}
+.lede{font-weight:600;max-width:60ch;color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
+/* Index */
+.entries{list-style:none;padding:0;margin-top:30px}
+.entries li{padding:24px 0;border-top:2px solid var(--ink)}
+.entries h2{font-size:1.45rem;line-height:1.2;font-weight:900;letter-spacing:-.01em;margin:4px 0 8px;text-wrap:balance}
+.entries h2 a{text-decoration:none}
+.entries h2 a:hover{text-decoration:underline;text-decoration-color:var(--peri)}
+.entries p:not(.meta){max-width:62ch;color:var(--ink-soft)}
+
+/* Post */
+.post .prose{margin-top:28px;padding-top:24px;border-top:2px solid var(--ink)}
+.prose{max-width:66ch;line-height:1.7}
+.prose p+p,.prose p+ol,.prose ol+p,.prose p+ul,.prose ul+p{margin-top:18px}
+.prose h2{font-size:var(--body);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:34px 0 8px}
+.prose ol,.prose ul{padding-left:1.4em}
+.prose ul{list-style:disc}
+.prose li+li{margin-top:10px}
+.prose li::marker{font-weight:800;color:var(--ink-soft)}
+.prose code{font-variation-settings:'MONO' 1;font-size:.92em;background:rgba(124,139,255,.14);padding:.1em .35em;border-radius:3px}
+.prose pre{overflow-x:auto;padding:14px 16px;background:var(--ground);color:var(--on-ground);border-radius:3px;font-variation-settings:'MONO' 1;font-size:var(--small);line-height:1.5}
+.prose pre code{background:none;padding:0}
+.prose img{max-width:100%;height:auto;border-radius:2px}
+.back{margin-top:34px;font-weight:700}
+
+.colophon{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;color:var(--on-ground-soft);font-size:var(--small);padding:16px 6px 0}
+
+@media (max-width:600px){
+  .sheet{padding:28px 18px 32px 44px}
+  .sheet::before{left:10px}
+}
